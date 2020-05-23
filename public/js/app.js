@@ -6,7 +6,7 @@ if (!roomId || !peerName) {
   throw new Error('roomId and peerName weren\'t set in url params');
 }
 
-const socket = io('http://localhost:8080/', { query: { roomId, peerName } });
+const socket = io('https://still-woodland-13583.herokuapp.com', { query: { roomId, peerName } });
 
 // Create a local Room instance associated to the remote Room.
 const room = new mediasoupClient.Room();
